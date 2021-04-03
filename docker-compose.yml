@@ -6,7 +6,7 @@ services:
     container_name: reactapp
     restart: always
     ports:
-      - '3003:3000'
+      - '3003:8080'
     command: 'npm run start'
     networks:
       - leapper-corporate_default
