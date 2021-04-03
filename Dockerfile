@@ -1,5 +1,5 @@
 
-FROM node:10.7
+FROM node:14
 
 ENV APP_ROOT /src
 # ENV HOST 0.0.0.0
