@@ -8,8 +8,6 @@ services:
     ports:
       - '3003:3000'
     command: 'npm run start'
-    environment: 
-      - HOST=0.0.0.0
     networks:
       - leapper-corporate_default
 
