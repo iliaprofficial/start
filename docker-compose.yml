@@ -16,4 +16,3 @@ services:
 networks:
   leapper-corporate_default:
     external: true
-
