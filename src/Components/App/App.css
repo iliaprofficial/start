@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+.App {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto 300px;
+    grid-template-rows: auto 50px;
+    grid-template-areas:
+    "show desc"
+    "bar desc";
+}
+
+.AppShow {
+    grid-area: show;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.AppShowGadget {
+    background-color: #000;
+    border: 8px solid #000;
+    /*padding: 8px;*/
+    border-radius: 5px;
+    overflow: hidden;
+    transition: width .4s, height .4s, border-radius .4s;
+}
+
+.AppShowGadget.phone {
+    width: 33vh;
+    height: 66vh;
+    border-radius: 24px;
+}
+
+.AppShowGadget.pc {
+    width: calc((100vw - 300px) * 0.65);
+    height: calc((100vw - 300px) * 0.365625);
+    border-radius: 5px;
+}
+
+.AppShowGadget.tv {
+    width: calc((100vw - 300px) * 0.9);
+    height: calc((100vw - 300px) * 0.5);
+    border-radius: 0;
+}
+
+.AppBar {
+    grid-area: bar;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 16px;
+}
+
+.AppBarIcon {
+    cursor: pointer;
+    height: 26px;
+    width: 26px;
+}
+
+.AppDesc {
+    border-left: 5px solid red;
+    grid-area: desc;
+    overflow: hidden;
+}
+
+.AppDescContent {
+    width: 900px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    transition: margin-left .5s;
+}
+
+.AppDescContent div {
+    width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    margin-left: 16px;
+}
+
+.AppDescContent div ul {
+    padding: 16px;
+}
+
+.AppDescContent div ul li {
+    color: #f00;
+}
+
+.AppDescContent div li span p {
+    color: #333;
+}
+
+.AppDescContent.phone {
+    margin-left: 0;
+}
+
+.AppDescContent.pc {
+    margin-left: -300px;
+}
+
+.AppDescContent.tv {
+    margin-left: -600px;
+}
