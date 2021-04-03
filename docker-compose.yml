@@ -7,7 +7,7 @@ services:
     restart: always
     ports:
       - '3003:8080'
-    command: 'npm run start'
+    command: 'yarn start'
     networks:
       - leapper-corporate_default
 
