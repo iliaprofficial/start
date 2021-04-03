@@ -7,7 +7,7 @@ services:
     restart: always
     ports:
       - '3003:3000'
-    command: 'npm run dev'
+    command: 'npm run start'
     environment: 
       - HOST=0.0.0.0
     networks:
